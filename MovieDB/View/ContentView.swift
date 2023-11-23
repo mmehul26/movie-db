@@ -47,6 +47,7 @@ private struct MovieListItemView: View {
       NavigationLink(value: "\(movie.id ?? 0)") {
         HStack {
           NetworkImage(imageURL: movie.posterImage)
+            .cornerRadius(8.0)
             .frame(width: 120, height: 150)
           Text(movie.originalTitle ?? "")
             .multilineTextAlignment(.leading)

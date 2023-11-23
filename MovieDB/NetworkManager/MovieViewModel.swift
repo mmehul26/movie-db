@@ -13,11 +13,12 @@ class MovieViewModel: ObservableObject {
   @Published var movieDetail: MovieDetail?
   @Published var isLoading: Bool = false
   @Published var networkError: NetworkError?
-    
+  
   private let headers = [
     "accept": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYjVmNTM5MzBjMDEyZThmZTY0ZjRkYjhlZGU4MWJiNCIsInN1YiI6IjY1NWRjZTJlN2YyZDRhMDBjOTdhMzhiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ggc-MLB8iU_M-Jk62TFDHrnGlB902yKX4wUqtgC9Kbw"
+    "Authorization": ""
   ]
+  #error("Please add db api token for testing")
   
   func fetchMovies(page: Int = 1) async {
     
@@ -47,7 +48,7 @@ class MovieViewModel: ObservableObject {
       }
       
       movies = try JSONDecoder().decode(MovieManager.self, from: data).results
-
+      
     } catch {
       networkError = .unspecifiedError
     }
@@ -87,5 +88,5 @@ class MovieViewModel: ObservableObject {
       networkError = .unspecifiedError
     }
   }
-
+  
 }

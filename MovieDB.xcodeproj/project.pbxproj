@@ -21,6 +21,7 @@
 		401D05E62B0E827900E47938 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401D05E52B0E827900E47938 /* MovieDetail.swift */; };
 		403C1DB52B0E89ED0036E308 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C1DB42B0E89ED0036E308 /* Constant.swift */; };
 		403C1DBA2B0EB1480036E308 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C1DB92B0EB1480036E308 /* NetworkImage.swift */; };
+		40BB52812B0F193E00CCF189 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 40BB52802B0F193E00CCF189 /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BB52812B0F193E00CCF189 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +190,9 @@
 			dependencies = (
 			);
 			name = MovieDB;
+			packageProductDependencies = (
+				40BB52802B0F193E00CCF189 /* NukeUI */,
+			);
 			productName = MovieDB;
 			productReference = 401D05AC2B0E164300E47938 /* MovieDB.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 401D05A32B0E164300E47938;
+			packageReferences = (
+				40BB527F2B0F193E00CCF189 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 401D05AD2B0E164300E47938 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -634,6 +642,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40BB527F2B0F193E00CCF189 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40BB52802B0F193E00CCF189 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40BB527F2B0F193E00CCF189 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 401D05A42B0E164300E47938 /* Project object */;
 }
